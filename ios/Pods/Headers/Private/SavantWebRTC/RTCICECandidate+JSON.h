@@ -1,0 +1,1 @@
+../../../SavantWebRTC/Pod/Classes/RTCICECandidate+JSON.h

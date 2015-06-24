@@ -1,0 +1,83 @@
+PODS:
+  - CocoaLumberjack (2.0.0):
+    - CocoaLumberjack/Default (= 2.0.0)
+    - CocoaLumberjack/Extensions (= 2.0.0)
+  - CocoaLumberjack/Core (2.0.0)
+  - CocoaLumberjack/Default (2.0.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.0):
+    - CocoaLumberjack/Default
+  - CompactConstraint (7.1.1-savant)
+  - Fabric (1.2.3):
+    - Fabric/Core (= 1.2.3)
+  - Fabric/Core (1.2.3)
+  - Fabric/Crashlytics (1.2.3)
+  - FMDB (2.5-savant):
+    - FMDB/standard (= 2.5-savant)
+  - FMDB/common (2.5-savant)
+  - FMDB/standard (2.5-savant):
+    - FMDB/common
+  - Mixpanel/AppExtension (2.8.0)
+  - PMEDatePicker (0.0.1)
+  - Reveal-iOS-SDK (1.5.1)
+  - SavantWebRTC (0.6)
+  - SimulatorStatusMagic (1.5)
+  - TTTAttributedLabel (1.10.1)
+
+DEPENDENCIES:
+  - CocoaLumberjack (= 2.0.0)
+  - CompactConstraint (= 7.1.1-savant)
+  - Fabric (from `https://github.com/SavantSystems/Fabric.git`, tag `v1.2.3`)
+  - Fabric/Crashlytics (from `https://github.com/SavantSystems/Fabric.git`, tag `v1.2.3`)
+  - FMDB (= 2.5-savant)
+  - Mixpanel/AppExtension (from `https://github.com/savantsystems/mixpanel-iphone.git`,
+    tag `v2.8.0`)
+  - PMEDatePicker (from `https://github.com/savantsystems/PMEDatePicker.git`, branch
+    `release/7.0`)
+  - Reveal-iOS-SDK
+  - SavantWebRTC (= 0.6)
+  - SimulatorStatusMagic
+  - TTTAttributedLabel (from `https://github.com/savantsystems/TTTAttributedLabel.git`,
+    branch `savant-1.10.1`)
+
+EXTERNAL SOURCES:
+  Fabric:
+    :git: https://github.com/SavantSystems/Fabric.git
+    :tag: v1.2.3
+  Mixpanel:
+    :git: https://github.com/savantsystems/mixpanel-iphone.git
+    :tag: v2.8.0
+  PMEDatePicker:
+    :branch: release/7.0
+    :git: https://github.com/savantsystems/PMEDatePicker.git
+  TTTAttributedLabel:
+    :branch: savant-1.10.1
+    :git: https://github.com/savantsystems/TTTAttributedLabel.git
+
+CHECKOUT OPTIONS:
+  Fabric:
+    :git: https://github.com/SavantSystems/Fabric.git
+    :tag: v1.2.3
+  Mixpanel:
+    :git: https://github.com/savantsystems/mixpanel-iphone.git
+    :tag: v2.8.0
+  PMEDatePicker:
+    :commit: c0e437c0f435d24aaf612e56199084db4127827b
+    :git: https://github.com/savantsystems/PMEDatePicker.git
+  TTTAttributedLabel:
+    :commit: 76aec740cea55aa9823cd25b66f1369693a95739
+    :git: https://github.com/savantsystems/TTTAttributedLabel.git
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
+  CompactConstraint: ec00eeb51a5a632823bb8a7062db1084555ee0c9
+  Fabric: 8a5b89c2131962830d92bbc88d482e80665846b2
+  FMDB: e7f302efd5c81fc6ab50088675497ceacddb051c
+  Mixpanel: 933b51dd0c7914c80866b3753ef407dce353ebc9
+  PMEDatePicker: 47dd9751e4750977d3daa8d61af93eb2d40f9f85
+  Reveal-iOS-SDK: c9c55cad2729c85f6ced415f1b21857c9a2d8ef9
+  SavantWebRTC: 41a0731b92de12171d33e6430084a12030df3f8a
+  SimulatorStatusMagic: c62f346b59e4630962ae8d421c7cc01872bbd7b5
+  TTTAttributedLabel: c8f3801a6463b9c9b82b0c84c465fdda9751892a
+
+COCOAPODS: 0.37.2

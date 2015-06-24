@@ -1,0 +1,30 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'ssh://git@git.cs.savantsystems.com:7999/ios/specs.git'
+
+platform :ios, '8.0'
+inhibit_all_warnings!
+
+# Debug pods
+pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+pod 'SimulatorStatusMagic', :configurations => ['Debug']
+
+pod 'Fabric', :git => 'https://github.com/SavantSystems/Fabric.git', :tag => 'v1.2.3'
+pod 'Fabric/Crashlytics', :git => 'https://github.com/SavantSystems/Fabric.git', :tag => 'v1.2.3'
+pod 'Mixpanel/AppExtension', :git => 'https://github.com/savantsystems/mixpanel-iphone.git', :tag => 'v2.8.0'
+pod 'TTTAttributedLabel', :git => 'https://github.com/savantsystems/TTTAttributedLabel.git', :branch => 'savant-1.10.1'
+pod 'PMEDatePicker', :git => 'https://github.com/savantsystems/PMEDatePicker.git', :branch => 'release/7.0'
+
+target :SDK, :exclusive => true do
+  pod 'FMDB', '2.5-savant'
+  pod 'CocoaLumberjack', '2.0.0'
+  pod 'SavantWebRTC', '0.6'
+end
+
+target :Extensions, :exclusive => true do
+  pod 'CompactConstraint', '7.1.1-savant'
+end
+
+post_install do | installer |
+  require 'fileutils'
+    FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-acknowledgements.plist', 'Savant/Resources/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+end

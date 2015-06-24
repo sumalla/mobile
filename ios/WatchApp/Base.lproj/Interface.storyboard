@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Savant-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Savant" contentMode="scaleAspectFit" id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <imageView alignment="center" verticalAlignment="center" image="ReconnectIcon" id="kag-8j-vf0"/>
+                        <label width="1" alignment="center" verticalAlignment="center" text="Primary Status Label" textAlignment="center" numberOfLines="0" id="HI1-HD-tJo">
+                            <color key="textColor" red="0.41176470588235292" green="0.37647058823529411" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <table alignment="left" id="leY-hL-pwm">
+                            <items>
+                                <tableRow identifier="Scene" id="vJH-Pk-bvS" customClass="SceneRow">
+                                    <group key="rootItem" width="1" height="47" alignment="left" layout="vertical" spacing="0.0" id="kOb-77-dB4">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Scene" textAlignment="center" minimumScaleFactor="0.80000000000000004" id="UxW-Sn-D3e">
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                            <label alignment="center" verticalAlignment="center" text="Room" textAlignment="center" minimumScaleFactor="0.90000000000000002" id="XcK-PM-Gqt">
+                                                <color key="textColor" red="0.71764705882352942" green="0.67843137254901964" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="roomLabel" destination="XcK-PM-Gqt" id="9fx-ib-2ci"/>
+                                        <outlet property="sceneNameLabel" destination="UxW-Sn-D3e" id="xCc-Xd-vvd"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="reconnectIcon" destination="kag-8j-vf0" id="cmG-K1-beT"/>
+                        <outlet property="statusLabel" destination="HI1-HD-tJo" id="UaX-Uc-fEC"/>
+                        <outlet property="table" destination="leY-hL-pwm" id="B4d-ZD-Dly"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-176" y="244"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" textAlignment="left" numberOfLines="0" id="IdU-wH-bcW">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf">
+                        <color key="titleColor" red="0.41176470588235292" green="0.37647058823529411" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sashColor" red="0.85882352941176465" green="0.85098039215686272" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </notificationCategory>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="4" bottom="4"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="-219" y="553"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="553"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="c1D-Gn-gkC">
+            <objects>
+                <glanceController id="Z0R-Og-3Yb" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" id="X0Z-ZH-doB">
+                            <items>
+                                <imageView alignment="left" image="ReconnectIcon" id="Sa0-9P-r5s"/>
+                            </items>
+                            <edgeInsets key="margins" left="3" right="0.0" top="6" bottom="0.0"/>
+                        </group>
+                        <group alignment="left" layout="vertical" spacing="0.0" id="1Ct-6R-x1Z">
+                            <items>
+                                <group height="42" alignment="left" verticalAlignment="center" id="x69-VU-GBA">
+                                    <items>
+                                        <group width="44" height="30" alignment="left" verticalAlignment="center" id="oPj-ug-Cxl">
+                                            <items>
+                                                <label height="39" alignment="center" verticalAlignment="center" text="75°" minimumScaleFactor="0.70000000000000007" id="qcq-Op-pBJ">
+                                                    <fontDescription key="font" type="system" pointSize="38"/>
+                                                    <variation key="device=watch38mm" text="70°">
+                                                        <fontDescription key="font" type="system" pointSize="34"/>
+                                                    </variation>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="40" height="30" alignment="left" verticalAlignment="center" id="ko3-QN-sqa">
+                                            <items>
+                                                <imageView width="30" height="30" alignment="center" verticalAlignment="center" image="Lighting-Watch" id="Yi6-om-IDb"/>
+                                            </items>
+                                        </group>
+                                        <group width="40" height="30" alignment="left" verticalAlignment="center" id="mgB-kq-XxK">
+                                            <items>
+                                                <imageView width="30" height="30" alignment="center" verticalAlignment="center" image="Media-Watch" id="CrI-He-382"/>
+                                            </items>
+                                        </group>
+                                    </items>
+                                    <variation key="device=watch42mm" spacing="12"/>
+                                </group>
+                                <label alignment="left" verticalAlignment="center" text="Demo Home" minimumScaleFactor="0.70000000000000007" id="lfh-wB-HDI">
+                                    <color key="textColor" red="0.71764705880000002" green="0.67843137249999996" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label width="1" alignment="center" text="Primary Status Label" textAlignment="center" numberOfLines="0" id="6Hi-6Y-Bd7">
+                                    <color key="textColor" red="0.41176470590000003" green="0.37647058820000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="6" right="6" top="0.0" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="homename" destination="lfh-wB-HDI" id="kde-8v-jLu"/>
+                        <outlet property="lighting" destination="ko3-QN-sqa" id="Ehx-pH-tXO"/>
+                        <outlet property="media" destination="mgB-kq-XxK" id="obm-Xy-vms"/>
+                        <outlet property="statusLabel" destination="6Hi-6Y-Bd7" id="sSz-Ag-td7"/>
+                        <outlet property="temperature" destination="oPj-ug-Cxl" id="H6d-R4-Ya5"/>
+                        <outlet property="temperatureLabel" destination="qcq-Op-pBJ" id="5cR-4A-nKJ"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="306" y="47.512820512820518"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.71764705882352942" green="0.67843137254901964" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
